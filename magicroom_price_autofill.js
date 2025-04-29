@@ -1,3 +1,6 @@
+// NAME: Magicroom Price Auto Fill
+// URL: https://magicroom.store/bitrix/admin/cat_product_edit.php?*
+
 function createWidget() {
     // Создаём контейнер
     const container = document.createElement('div');
@@ -72,7 +75,7 @@ function createWidget() {
         const lines = inputText.split('\n').map(line => line.trim()).filter(line => line.length > 0);
 
         // Проверяем, что первая строка — это заголовок
-        if (!lines[0].startsWith('РАЗМЕР ВОЗРАСТ Цена розница' || 'РАЗМЕР	ВОЗРАСТ	Цена розница (руб.)')) {
+        if ( !lines[0].startsWith('РАЗМЕР ВОЗРАСТ Цена розница') && !lines[0].startsWith('РАЗМЕР	ВОЗРАСТ	Цена розница (руб.)') ) {
             alert('Первая строка должна быть описанием: "РАЗМЕР ВОЗРАСТ Цена розница"');
             return;
         }

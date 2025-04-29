@@ -1,3 +1,6 @@
+// NAME: Magicroom Price Mini Fill
+// URL: https://magicroom.store/bitrix/admin/cat_product_edit.php?*
+
 function createInterface() {
     // Создаём контейнер
     const container = document.createElement('div');
